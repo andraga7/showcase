@@ -1,3 +1,19 @@
+"""
+This script scrapes quotes from the website http://quotes.toscrape.com/.
+It uses Selenium to automate browser actions and BeautifulSoup to parse the HTML content.
+The script performs the following tasks:
+
+1. Initializes a headless Chrome WebDriver to navigate through the website.
+2. Scrapes quotes, authors, and associated tags from multiple pages of quotes.
+3. Stores the scraped data in a structured format (list of dictionaries).
+4. Saves the collected quotes to both CSV and JSON files.
+5. Implements error handling to manage issues such as missing elements or timeouts.
+6. Uses logging to track progress and capture errors during execution.
+
+To use this script, simply run it in an environment where Selenium and BeautifulSoup are installed.
+Make sure you have the appropriate WebDriver for your browser (e.g., ChromeDriver for Google Chrome).
+"""
+
 import time
 import random
 import pandas as pd

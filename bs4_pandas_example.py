@@ -1,3 +1,19 @@
+"""
+This script scrapes real estate listings from a specified location on Realtor.com.
+It extracts details such as property titles (prices), addresses, number of bedrooms,
+number of bathrooms, square footage, and stores this information in an SQLite database.
+
+The script performs the following tasks:
+1. Scrapes property listings from the specified location.
+2. Cleans and converts price strings to numeric values for sorting and database storage.
+3. Creates an SQLite database (if it doesn't already exist) and defines a table for listings.
+4. Inserts new listings into the database while avoiding duplicates based on price.
+5. Logs progress and any issues encountered during the scraping process.
+
+To use this script, modify the 'location' variable in the main function to specify
+the desired area for real estate listings.
+"""
+
 import requests
 import pandas as pd
 import json
